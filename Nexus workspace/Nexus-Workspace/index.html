@@ -1,0 +1,6115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07090d"
+    >
+
+    <title>
+        Nexus Workspace
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    N
+                </div>
+
+                <div class="brand-text">
+
+                    <h2>
+                        NEXUS
+                    </h2>
+
+                    <span>
+                        WORKSPACE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-navigation">
+
+                <p class="nav-heading">
+                    WORKSPACE
+                </p>
+
+
+                <button
+                    class="nav-item active"
+                    data-section="dashboard"
+                >
+
+                    <span class="nav-icon">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="academics"
+                >
+
+                    <span class="nav-icon">
+                        🎓
+                    </span>
+
+                    <span>
+                        Academics
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="engineering"
+                >
+
+                    <span class="nav-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Engineering
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="tasks"
+                >
+
+                    <span class="nav-icon">
+                        ✓
+                    </span>
+
+                    <span>
+                        Tasks
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="focus"
+                >
+
+                    <span class="nav-icon">
+                        ◷
+                    </span>
+
+                    <span>
+                        Focus
+                    </span>
+
+                </button>
+
+
+                <p class="nav-heading tools-heading">
+                    TOOLS
+                </p>
+
+
+                <button
+                    class="nav-item"
+                    data-section="notes"
+                >
+
+                    <span class="nav-icon">
+                        ▤
+                    </span>
+
+                    <span>
+                        Notes
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="resources"
+                >
+
+                    <span class="nav-icon">
+                        ↗
+                    </span>
+
+                    <span>
+                        Resources
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="analytics"
+                >
+
+                    <span class="nav-icon">
+                        ◒
+                    </span>
+
+                    <span>
+                        Analytics
+                    </span>
+
+                </button>
+
+            </nav>
+<!-- =====================================================
+     NEXUS GLOBAL SEARCH
+===================================================== -->
+
+<div
+    class="nexus-search-overlay"
+    id="nexusSearchOverlay"
+    hidden
+>
+
+    <div class="nexus-search-modal">
+
+        <div class="nexus-search-header">
+
+            <div class="nexus-search-input-wrapper">
+
+                <span class="nexus-search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="globalSearchInput"
+                    class="global-search-input"
+                    placeholder="Search Nexus..."
+                    autocomplete="off"
+                >
+
+                <kbd>
+                    ESC
+                </kbd>
+
+            </div>
+
+        </div>
+
+
+        <div class="nexus-search-body">
+
+            <div
+                class="search-results-header"
+                id="searchResultsHeader"
+            >
+                Start typing to search your workspace.
+            </div>
+
+
+            <div
+                class="global-search-results"
+                id="globalSearchResults"
+            >
+
+                <!-- Results generated by JavaScript -->
+
+            </div>
+
+
+            <div
+                class="global-search-empty"
+                id="globalSearchEmpty"
+                hidden
+            >
+
+                <div class="search-empty-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    Nothing found
+                </h3>
+
+                <p>
+                    Try searching for a task, note, subject,
+                    project or resource.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="nexus-search-footer">
+
+            <span>
+                <kbd>↑</kbd>
+                <kbd>↓</kbd>
+                Navigate
+            </span>
+
+            <span>
+                <kbd>ENTER</kbd>
+                Open
+            </span>
+
+            <span>
+                <kbd>ESC</kbd>
+                Close
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================================
+     NEXUS COMMAND CENTER
+===================================================== -->
+
+<div
+    class="nexus-command-overlay"
+    id="nexusCommandOverlay"
+    hidden
+>
+
+    <div class="nexus-command-modal">
+
+        <!-- HEADER -->
+
+        <div class="nexus-command-header">
+
+            <div class="nexus-command-input-wrapper">
+
+                <span class="nexus-command-icon">
+                    ⌘
+                </span>
+
+                <input
+                    type="text"
+                    id="commandInput"
+                    class="command-input"
+                    placeholder="What do you want to do?"
+                    autocomplete="off"
+                >
+
+                <kbd>
+                    ESC
+                </kbd>
+
+            </div>
+
+        </div>
+
+
+        <!-- COMMAND BODY -->
+
+        <div class="nexus-command-body">
+
+            <div class="command-section-title">
+                QUICK ACTIONS
+            </div>
+
+
+            <div
+                class="command-list"
+                id="commandList"
+            >
+
+                <!-- Commands generated by JavaScript -->
+
+            </div>
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="command-empty"
+                id="commandEmpty"
+                hidden
+            >
+
+                <div class="command-empty-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    No commands found
+                </h3>
+
+                <p>
+                    Try searching for an action such as
+                    "task", "note", "calendar" or "focus".
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="nexus-command-footer">
+
+            <span>
+                <kbd>↑</kbd>
+                <kbd>↓</kbd>
+                Navigate
+            </span>
+
+            <span>
+                <kbd>ENTER</kbd>
+                Run
+            </span>
+
+            <span>
+                <kbd>ESC</kbd>
+                Close
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    MD
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Mr Damien
+                    </strong>
+
+                    <span>
+                        Computer Engineering
+                    </span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button
+                        id="mobileMenuButton"
+                        class="mobile-menu-button"
+                    >
+                        ☰
+                    </button>
+
+                    <span id="currentDate">
+                    </span>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <button
+                        class="topbar-button"
+                        id="notificationButton"
+                    >
+                        ◌
+                    </button>
+
+
+                    <div class="user-badge">
+
+                        <div class="small-avatar">
+                            MD
+                        </div>
+
+                        <span>
+                            Mr Damien
+                        </span>
+
+                    </div>
+                    <button
+    class="global-search-trigger"
+    id="globalSearchTrigger"
+>
+
+    <span>
+        ⌕
+    </span>
+
+    <span>
+        Search Nexus...
+    </span>
+
+    <kbd>
+        Ctrl K
+    </kbd>
+
+</button>
+
+<button
+    class="command-center-trigger"
+    id="commandCenterTrigger"
+    title="Open Command Center"
+>
+
+    <span>⌘</span>
+
+    <kbd>
+        Ctrl Space
+    </kbd>
+
+</button>
+                </div>
+
+            </header>
+
+
+            <!-- CONTENT -->
+
+            <div class="content">
+
+                <!-- DASHBOARD -->
+
+                <section
+                    id="dashboard"
+                    class="page-section active-section"
+                >
+
+                    <div class="welcome-section">
+
+                        <div>
+
+                            <p class="section-label">
+                                PERSONAL COMMAND CENTER
+                            </p>
+
+                            <h1 id="welcomeMessage">
+                                Welcome, Mr Damien.
+                            </h1>
+
+                            <p class="welcome-description">
+                                Your personal study,
+                                productivity and engineering workspace.
+                            </p>
+
+                        </div>
+
+
+                        <div class="digital-clock">
+
+                            <span id="clock">
+                                00:00:00
+                            </span>
+
+                            <small>
+                                Local time
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATISTICS -->
+
+                    <div class="statistics-grid">
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-header">
+
+                                <span>
+                                    Study Time
+                                </span>
+
+                                <div class="stat-icon">
+                                    ◷
+                                </div>
+
+                            </div>
+
+                            <strong>
+                                2h 40m
+                            </strong>
+
+                            <small>
+                                This week
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-header">
+
+                                <span>
+                                    Tasks
+                                </span>
+
+                                <div class="stat-icon">
+                                    ✓
+                                </div>
+
+                            </div>
+
+                            <strong>
+                                0 / 3
+                            </strong>
+
+                            <small>
+                                Completed today
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-header">
+
+                                <span>
+                                    Courses
+                                </span>
+
+                                <div class="stat-icon">
+                                    🎓
+                                </div>
+
+                            </div>
+
+                            <strong>
+                                8
+                            </strong>
+
+                            <small>
+                                Current semester
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-header">
+
+                                <span>
+                                    Study Streak
+                                </span>
+
+                                <div class="stat-icon">
+                                    ✦
+                                </div>
+
+                            </div>
+
+                            <strong>
+                                7 days
+                            </strong>
+
+                            <small>
+                                Keep going
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DASHBOARD CONTENT -->
+
+                    <div class="dashboard-grid">
+
+
+                        <!-- FOCUS CARD -->
+
+                        <div class="glass-card focus-card">
+
+                            <p class="card-label">
+                                TODAY'S FOCUS
+                            </p>
+
+                            <h2>
+                                Digital Logic
+                            </h2>
+
+                            <p class="card-description">
+                                Boolean Algebra · EEE 204
+                            </p>
+
+
+                            <div class="progress-container">
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-value"
+                                        style="width: 76%"
+                                    >
+                                    </div>
+
+                                </div>
+
+                                <div class="progress-information">
+
+                                    <span>
+                                        76% complete
+                                    </span>
+
+                                    <span>
+                                        24% remaining
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="focus-actions">
+
+                                <button
+                                    class="primary-button"
+                                    id="startFocusButton"
+                                >
+                                    Start Focus Session
+                                </button>
+
+
+                                <button
+                                    class="secondary-button"
+                                    id="addTaskButton"
+                                >
+                                    Add Task
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TASK CARD -->
+
+                        <div class="glass-card">
+
+                            <div class="card-header">
+
+                                <h2>
+                                    Today's Tasks
+                                </h2>
+
+                                <span>
+                                    3 tasks
+                                </span>
+
+                            </div>
+
+
+                            <div class="task-list">
+
+                                <div class="task-item">
+
+                                    <input
+                                        type="checkbox"
+                                    >
+
+                                    <div class="task-information">
+
+                                        <strong>
+                                            Review Digital Logic
+                                        </strong>
+
+                                        <small>
+                                            EEE 204
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="task-item">
+
+                                    <input
+                                        type="checkbox"
+                                    >
+
+                                    <div class="task-information">
+
+                                        <strong>
+                                            Practice Mathematics
+                                        </strong>
+
+                                        <small>
+                                            MTH 202
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="task-item">
+
+                                    <input
+                                        type="checkbox"
+                                    >
+
+                                    <div class="task-information">
+
+                                        <strong>
+                                            Review C++ concepts
+                                        </strong>
+
+                                        <small>
+                                            CPE 208
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="glass-card quick-actions-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                            <span>
+                                Productivity
+                            </span>
+
+                        </div>
+
+
+                        <div class="quick-actions-grid">
+
+                            <button class="quick-action">
+
+                                <span>
+                                    ＋
+                                </span>
+
+                                <strong>
+                                    New Task
+                                </strong>
+
+                                <small>
+                                    Add something to your workload
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action">
+
+                                <span>
+                                    ◷
+                                </span>
+
+                                <strong>
+                                    Focus Session
+                                </strong>
+
+                                <small>
+                                    Start a deep-work session
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action">
+
+                                <span>
+                                    ▤
+                                </span>
+
+                                <strong>
+                                    New Note
+                                </strong>
+
+                                <small>
+                                    Capture an idea
+                                </small>
+
+                            </button>
+
+
+                            <button class="quick-action">
+
+                                <span>
+                                    ⚙
+                                </span>
+
+                                <strong>
+                                    Engineering
+                                </strong>
+
+                                <small>
+                                    Open engineering workspace
+                                </small>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- OTHER SECTIONS -->
+
+               <!-- =====================================================
+     ACADEMICS SECTION
+===================================================== -->
+
+<section
+    id="academics"
+    class="page-section"
+>
+
+    <!-- ACADEMICS HEADER -->
+
+    <div class="academics-header">
+
+        <div>
+
+            <p class="section-label">
+                ACADEMIC COMMAND CENTER
+            </p>
+
+            <h1>
+                Academics
+            </h1>
+
+            <p class="academics-description">
+                Manage your courses, grades, assignments,
+                examinations and academic progress.
+            </p>
+
+        </div>
+
+
+        <div class="semester-selector">
+
+            <label for="semesterSelect">
+                Academic Session
+            </label>
+
+            <select id="semesterSelect">
+
+                <option value="2025-2026">
+                    2025 / 2026
+                </option>
+
+                <option value="2026-2027">
+                    2026 / 2027
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- ACADEMIC STATISTICS -->
+
+    <div class="academic-stats-grid">
+
+
+        <div class="academic-stat-card">
+
+            <div class="academic-stat-icon">
+                🎓
+            </div>
+
+            <span>
+                Current CGPA
+            </span>
+
+            <strong id="cgpaValue">
+                0.00
+            </strong>
+
+            <small>
+                Based on recorded grades
+            </small>
+
+        </div>
+
+
+        <div class="academic-stat-card">
+
+            <div class="academic-stat-icon">
+                ◈
+            </div>
+
+            <span>
+                Credit Units
+            </span>
+
+            <strong id="creditUnits">
+                0
+            </strong>
+
+            <small>
+                Current semester
+            </small>
+
+        </div>
+
+
+        <div class="academic-stat-card">
+
+            <div class="academic-stat-icon">
+                ✓
+            </div>
+
+            <span>
+                Courses
+            </span>
+
+            <strong id="courseCount">
+                0
+            </strong>
+
+            <small>
+                Registered courses
+            </small>
+
+        </div>
+
+
+        <div class="academic-stat-card">
+
+            <div class="academic-stat-icon">
+                ★
+            </div>
+
+            <span>
+                Academic Status
+            </span>
+
+            <strong id="academicStatus">
+                Pending
+            </strong>
+
+            <small>
+                Based on current CGPA
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN ACADEMIC GRID -->
+
+    <div class="academics-main-grid">
+
+
+        <!-- COURSE PROGRESS -->
+
+        <div class="glass-card courses-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <p class="card-label">
+                        CURRENT SEMESTER
+                    </p>
+
+                    <h2>
+                        My Courses
+                    </h2>
+
+                </div>
+
+                <button
+                    class="small-action-button"
+                    id="addCourseButton"
+                >
+                    + Add Course
+                </button>
+
+            </div>
+
+
+            <div
+                class="course-list"
+                id="courseList"
+            >
+
+                <!-- Courses will be generated
+                     by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- ACADEMIC PROGRESS -->
+
+        <div class="glass-card academic-progress-card">
+
+            <p class="card-label">
+                ACADEMIC PROGRESS
+            </p>
+
+            <h2>
+                Semester Progress
+            </h2>
+
+
+            <div class="semester-progress-circle">
+
+                <div>
+
+                    <strong id="semesterProgress">
+                        0%
+                    </strong>
+
+                    <span>
+                        Complete
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-summary">
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        In Progress
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Remaining
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOWER GRID -->
+
+    <div class="academics-lower-grid">
+
+
+        <!-- ASSIGNMENTS -->
+
+        <div class="glass-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <p class="card-label">
+                        UPCOMING
+                    </p>
+
+                    <h2>
+                        Assignments
+                    </h2>
+
+                </div>
+
+                <button
+                    class="text-button"
+                >
+                    View All
+                </button>
+
+            </div>
+
+
+            <div
+                class="assignment-list"
+                id="assignmentList"
+            >
+
+                <div class="empty-state">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        No assignments added yet.
+                    </p>
+
+                    <small>
+                        Your upcoming assignments
+                        will appear here.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXAMS -->
+
+        <div class="glass-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <p class="card-label">
+                        EXAMINATION
+                    </p>
+
+                    <h2>
+                        Upcoming Exams
+                    </h2>
+
+                </div>
+
+                <button
+                    class="text-button"
+                >
+                    View All
+                </button>
+
+            </div>
+
+
+            <div
+                class="exam-list"
+                id="examList"
+            >
+
+                <div class="empty-state">
+
+                    <span>
+                        ◷
+                    </span>
+
+                    <p>
+                        No exams scheduled.
+                    </p>
+
+                    <small>
+                        Your examination timetable
+                        will appear here.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- GPA CALCULATOR -->
+
+    <div class="glass-card gpa-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    ACADEMIC TOOL
+                </p>
+
+                <h2>
+                    GPA Calculator
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="gpa-calculator">
+
+            <div class="gpa-input-group">
+
+                <label>
+                    Course
+                </label>
+
+                <input
+                    type="text"
+                    id="gpaCourse"
+                    placeholder="e.g. CPE 204"
+                >
+
+            </div>
+
+
+            <div class="gpa-input-group">
+
+                <label>
+                    Credit Units
+                </label>
+
+                <input
+                    type="number"
+                    id="gpaUnits"
+                    min="1"
+                    max="10"
+                    placeholder="3"
+                >
+
+            </div>
+
+
+            <div class="gpa-input-group">
+
+                <label>
+                    Grade
+                </label>
+
+                <select id="gpaGrade">
+
+                    <option value="5">
+                        A — 5
+                    </option>
+
+                    <option value="4">
+                        B — 4
+                    </option>
+
+                    <option value="3">
+                        C — 3
+                    </option>
+
+                    <option value="2">
+                        D — 2
+                    </option>
+
+                    <option value="1">
+                        E — 1
+                    </option>
+
+                    <option value="0">
+                        F — 0
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                id="calculateGpaButton"
+            >
+                Add Course
+            </button>
+
+        </div>
+
+
+        <div class="gpa-result">
+
+            <span>
+                Calculated GPA
+            </span>
+
+            <strong id="calculatedGpa">
+                0.00
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ENGINEERING LAB
+===================================================== -->
+
+<section id="engineering" class="page-section">
+
+    <div class="engineering-header">
+
+        <div>
+
+            <p class="section-label">
+                COMPUTER ENGINEERING LAB
+            </p>
+
+            <h1>
+                Engineering Lab
+            </h1>
+
+            <p class="engineering-description">
+                Your technical workspace for programming,
+                electronics, projects and engineering ideas.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-button"
+            id="newEngineeringProject"
+        >
+            + New Project
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         ENGINEERING OVERVIEW
+    ================================================== -->
+
+    <div class="engineering-overview">
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                ◇
+            </span>
+
+            <div>
+
+                <small>
+                    ACTIVE PROJECTS
+                </small>
+
+                <strong id="engineeringProjectCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                &lt;/&gt;
+            </span>
+
+            <div>
+
+                <small>
+                    CODE SNIPPETS
+                </small>
+
+                <strong id="engineeringSnippetCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                ⚡
+            </span>
+
+            <div>
+
+                <small>
+                    ENGINEERING TOPICS
+                </small>
+
+                <strong>
+                    8
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                ✓
+            </span>
+
+            <div>
+
+                <small>
+                    COMPLETED PROJECTS
+                </small>
+
+                <strong id="engineeringCompletedCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PROGRAMMING LANGUAGES
+    ================================================== -->
+
+    <div class="engineering-section-heading">
+
+        <div>
+
+            <p class="card-label">
+                DEVELOPMENT
+            </p>
+
+            <h2>
+                Programming
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="language-grid">
+
+        <button
+            class="language-card"
+            data-language="C++"
+        >
+
+            <div class="language-icon cpp">
+                C++
+            </div>
+
+            <div>
+
+                <strong>
+                    C++
+                </strong>
+
+                <span>
+                    Systems & Embedded
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+
+        <button
+            class="language-card"
+            data-language="Java"
+        >
+
+            <div class="language-icon java">
+                ☕
+            </div>
+
+            <div>
+
+                <strong>
+                    Java
+                </strong>
+
+                <span>
+                    Object-Oriented Programming
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+
+        <button
+            class="language-card"
+            data-language="Python"
+        >
+
+            <div class="language-icon python">
+                Py
+            </div>
+
+            <div>
+
+                <strong>
+                    Python
+                </strong>
+
+                <span>
+                    Automation & Applications
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+
+        <button
+            class="language-card"
+            data-language="JavaScript"
+        >
+
+            <div class="language-icon js">
+                JS
+            </div>
+
+            <div>
+
+                <strong>
+                    JavaScript
+                </strong>
+
+                <span>
+                    Web Development
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         ENGINEERING TOOLS
+    ================================================== -->
+
+    <div class="engineering-tools-grid">
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    ELECTRONICS
+                </p>
+
+                <h3>
+                    Digital Logic
+                </h3>
+
+                <p>
+                    Boolean algebra, logic gates,
+                    truth tables and digital systems.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="logic"
+            >
+                Open Lab
+            </button>
+
+        </div>
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                ∿
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    CIRCUITS
+                </p>
+
+                <h3>
+                    Circuit Calculator
+                </h3>
+
+                <p>
+                    Quick calculations for voltage,
+                    current, resistance and power.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="circuits"
+            >
+                Open Tool
+            </button>
+
+        </div>
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                &lt;/&gt;
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    PROGRAMMING
+                </p>
+
+                <h3>
+                    Code Snippets
+                </h3>
+
+                <p>
+                    Store reusable code and
+                    programming concepts.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="snippets"
+            >
+                Open Library
+            </button>
+
+        </div>
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                ◇
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    PROJECTS
+                </p>
+
+                <h3>
+                    Project Tracker
+                </h3>
+
+                <p>
+                    Track your engineering projects,
+                    ideas and milestones.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="projects"
+            >
+                View Projects
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PROJECTS
+    ================================================== -->
+
+    <div class="glass-card engineering-project-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    BUILDING
+                </p>
+
+                <h2>
+                    Engineering Projects
+                </h2>
+
+            </div>
+
+            <button
+                class="text-button"
+                id="engineeringAddProject"
+            >
+                + Add Project
+            </button>
+
+        </div>
+
+
+        <div
+            id="engineeringProjects"
+            class="engineering-projects"
+        >
+
+            <div class="engineering-empty">
+
+                <span>
+                    ◇
+                </span>
+
+                <p>
+                    No engineering projects yet.
+                </p>
+
+                <small>
+                    Start building something.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         QUICK REFERENCE
+    ================================================== -->
+
+    <div class="glass-card engineering-reference">
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    QUICK REFERENCE
+                </p>
+
+                <h2>
+                    Engineering Formulas
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="formula-grid">
+
+            <div class="formula-item">
+
+                <span>
+                    Ohm's Law
+                </span>
+
+                <strong>
+                    V = IR
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Electrical Power
+                </span>
+
+                <strong>
+                    P = VI
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Power
+                </span>
+
+                <strong>
+                    P = I²R
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Series Resistance
+                </span>
+
+                <strong>
+                    R = R₁ + R₂
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Parallel Resistance
+                </span>
+
+                <strong>
+                    1/R = 1/R₁ + 1/R₂
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Frequency
+                </span>
+
+                <strong>
+                    f = 1/T
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- =====================================================
+     ENGINEERING LAB
+===================================================== -->
+
+<section id="engineering" class="page-section">
+
+    <div class="engineering-header">
+
+        <div>
+
+            <p class="section-label">
+                COMPUTER ENGINEERING LAB
+            </p>
+
+            <h1>
+                Engineering Lab
+            </h1>
+
+            <p class="engineering-description">
+                Your technical workspace for programming,
+                electronics, projects and engineering ideas.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-button"
+            id="newEngineeringProject"
+        >
+            + New Project
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         ENGINEERING OVERVIEW
+    ================================================== -->
+
+    <div class="engineering-overview">
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                ◇
+            </span>
+
+            <div>
+
+                <small>
+                    ACTIVE PROJECTS
+                </small>
+
+                <strong id="engineeringProjectCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                &lt;/&gt;
+            </span>
+
+            <div>
+
+                <small>
+                    CODE SNIPPETS
+                </small>
+
+                <strong id="engineeringSnippetCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                ⚡
+            </span>
+
+            <div>
+
+                <small>
+                    ENGINEERING TOPICS
+                </small>
+
+                <strong>
+                    8
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-stat-card">
+
+            <span class="engineering-stat-icon">
+                ✓
+            </span>
+
+            <div>
+
+                <small>
+                    COMPLETED PROJECTS
+                </small>
+
+                <strong id="engineeringCompletedCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PROGRAMMING LANGUAGES
+    ================================================== -->
+
+    <div class="engineering-section-heading">
+
+        <div>
+
+            <p class="card-label">
+                DEVELOPMENT
+            </p>
+
+            <h2>
+                Programming
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="language-grid">
+
+        <button
+            class="language-card"
+            data-language="C++"
+        >
+
+            <div class="language-icon cpp">
+                C++
+            </div>
+
+            <div>
+
+                <strong>
+                    C++
+                </strong>
+
+                <span>
+                    Systems & Embedded
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+
+        <button
+            class="language-card"
+            data-language="Java"
+        >
+
+            <div class="language-icon java">
+                ☕
+            </div>
+
+            <div>
+
+                <strong>
+                    Java
+                </strong>
+
+                <span>
+                    Object-Oriented Programming
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+
+        <button
+            class="language-card"
+            data-language="Python"
+        >
+
+            <div class="language-icon python">
+                Py
+            </div>
+
+            <div>
+
+                <strong>
+                    Python
+                </strong>
+
+                <span>
+                    Automation & Applications
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+
+        <button
+            class="language-card"
+            data-language="JavaScript"
+        >
+
+            <div class="language-icon js">
+                JS
+            </div>
+
+            <div>
+
+                <strong>
+                    JavaScript
+                </strong>
+
+                <span>
+                    Web Development
+                </span>
+
+            </div>
+
+            <b>
+                →
+            </b>
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         ENGINEERING TOOLS
+    ================================================== -->
+
+    <div class="engineering-tools-grid">
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    ELECTRONICS
+                </p>
+
+                <h3>
+                    Digital Logic
+                </h3>
+
+                <p>
+                    Boolean algebra, logic gates,
+                    truth tables and digital systems.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="logic"
+            >
+                Open Lab
+            </button>
+
+        </div>
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                ∿
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    CIRCUITS
+                </p>
+
+                <h3>
+                    Circuit Calculator
+                </h3>
+
+                <p>
+                    Quick calculations for voltage,
+                    current, resistance and power.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="circuits"
+            >
+                Open Tool
+            </button>
+
+        </div>
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                &lt;/&gt;
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    PROGRAMMING
+                </p>
+
+                <h3>
+                    Code Snippets
+                </h3>
+
+                <p>
+                    Store reusable code and
+                    programming concepts.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="snippets"
+            >
+                Open Library
+            </button>
+
+        </div>
+
+
+        <div class="glass-card engineering-tool-card">
+
+            <div class="engineering-tool-icon">
+                ◇
+            </div>
+
+            <div>
+
+                <p class="card-label">
+                    PROJECTS
+                </p>
+
+                <h3>
+                    Project Tracker
+                </h3>
+
+                <p>
+                    Track your engineering projects,
+                    ideas and milestones.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button engineering-tool-button"
+                data-tool="projects"
+            >
+                View Projects
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PROJECTS
+    ================================================== -->
+
+    <div class="glass-card engineering-project-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    BUILDING
+                </p>
+
+                <h2>
+                    Engineering Projects
+                </h2>
+
+            </div>
+
+            <button
+                class="text-button"
+                id="engineeringAddProject"
+            >
+                + Add Project
+            </button>
+
+        </div>
+
+
+        <div
+            id="engineeringProjects"
+            class="engineering-projects"
+        >
+
+            <div class="engineering-empty">
+
+                <span>
+                    ◇
+                </span>
+
+                <p>
+                    No engineering projects yet.
+                </p>
+
+                <small>
+                    Start building something.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         QUICK REFERENCE
+    ================================================== -->
+
+    <div class="glass-card engineering-reference">
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    QUICK REFERENCE
+                </p>
+
+                <h2>
+                    Engineering Formulas
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="formula-grid">
+
+            <div class="formula-item">
+
+                <span>
+                    Ohm's Law
+                </span>
+
+                <strong>
+                    V = IR
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Electrical Power
+                </span>
+
+                <strong>
+                    P = VI
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Power
+                </span>
+
+                <strong>
+                    P = I²R
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Series Resistance
+                </span>
+
+                <strong>
+                    R = R₁ + R₂
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Parallel Resistance
+                </span>
+
+                <strong>
+                    1/R = 1/R₁ + 1/R₂
+                </strong>
+
+            </div>
+
+
+            <div class="formula-item">
+
+                <span>
+                    Frequency
+                </span>
+
+                <strong>
+                    f = 1/T
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>               
+
+<!-- =====================================================
+     TASK MANAGEMENT
+===================================================== -->
+
+<section
+    id="tasks"
+    class="page-section"
+>
+
+    <!-- HEADER -->
+
+    <div class="tasks-header">
+
+        <div>
+
+            <p class="section-label">
+                PRODUCTIVITY COMMAND CENTER
+            </p>
+
+            <h1>
+                Tasks
+            </h1>
+
+            <p class="tasks-description">
+                Organize your academic work, engineering
+                projects and personal priorities.
+            </p>
+
+        </div>
+
+
+        <button
+            class="primary-button"
+            id="openTaskModal"
+        >
+            + New Task
+        </button>
+
+    </div>
+
+
+    <!-- TASK STATISTICS -->
+
+    <div class="task-statistics">
+
+        <div class="task-stat-card">
+
+            <span>
+                Total Tasks
+            </span>
+
+            <strong id="totalTaskCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="task-stat-card">
+
+            <span>
+                Completed
+            </span>
+
+            <strong id="completedTaskCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="task-stat-card">
+
+            <span>
+                In Progress
+            </span>
+
+            <strong id="pendingTaskCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="task-stat-card">
+
+            <span>
+                High Priority
+            </span>
+
+            <strong id="highPriorityCount">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- TASK TOOLBAR -->
+
+    <div class="task-toolbar">
+
+        <div class="task-filters">
+
+            <button
+                class="task-filter active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="task-filter"
+                data-filter="today"
+            >
+                Today
+            </button>
+
+            <button
+                class="task-filter"
+                data-filter="pending"
+            >
+                Pending
+            </button>
+
+            <button
+                class="task-filter"
+                data-filter="completed"
+            >
+                Completed
+            </button>
+
+        </div>
+
+
+        <select
+            id="taskSort"
+            class="task-sort"
+        >
+
+            <option value="priority">
+                Sort by Priority
+            </option>
+
+            <option value="deadline">
+                Sort by Deadline
+            </option>
+
+            <option value="newest">
+                Newest First
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- TASK LIST -->
+
+    <div
+        class="tasks-container"
+        id="tasksContainer"
+    >
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TASK MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="taskModal"
+>
+
+    <div class="task-modal">
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="card-label">
+                    PRODUCTIVITY
+                </p>
+
+                <h2>
+                    Create New Task
+                </h2>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeTaskModal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="taskForm">
+
+            <div class="form-group">
+
+                <label>
+                    Task Name
+                </label>
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="e.g. Study Digital Logic"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="taskCategory">
+
+                        <option value="Academic">
+                            Academic
+                        </option>
+
+                        <option value="Engineering">
+                            Engineering
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                        <option value="Project">
+                            Project
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Priority
+                    </label>
+
+                    <select id="taskPriority">
+
+                        <option value="High">
+                            High
+                        </option>
+
+                        <option value="Medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Deadline
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDeadline"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Estimated Time
+                    </label>
+
+                    <select id="taskDuration">
+
+                        <option value="15 min">
+                            15 minutes
+                        </option>
+
+                        <option value="30 min">
+                            30 minutes
+                        </option>
+
+                        <option value="1 hour">
+                            1 hour
+                        </option>
+
+                        <option value="2 hours">
+                            2 hours
+                        </option>
+
+                        <option value="3+ hours">
+                            3+ hours
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    id="taskDescription"
+                    rows="4"
+                    placeholder="Add notes about this task..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelTask"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Create Task
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+ <!-- =====================================================
+     FOCUS SYSTEM
+===================================================== -->
+
+<section
+    id="focus"
+    class="page-section"
+>
+
+    <!-- HEADER -->
+
+    <div class="focus-page-header">
+
+        <div>
+
+            <p class="section-label">
+                DEEP WORK ENVIRONMENT
+            </p>
+
+            <h1>
+                Focus
+            </h1>
+
+            <p class="focus-page-description">
+                Enter deep work mode and make your study
+                sessions count.
+            </p>
+
+        </div>
+
+        <button
+            class="secondary-button"
+            id="focusFullscreenButton"
+        >
+            ⛶ Focus Mode
+        </button>
+
+    </div>
+
+
+    <!-- FOCUS DASHBOARD -->
+
+    <div class="focus-dashboard">
+
+
+        <!-- TIMER -->
+
+        <div class="glass-card focus-timer-card">
+
+            <div class="focus-mode-label">
+
+                <span
+                    id="focusModeIndicator"
+                    class="focus-dot"
+                ></span>
+
+                <span id="focusModeText">
+                    FOCUS SESSION
+                </span>
+
+            </div>
+
+
+            <div
+                class="focus-timer-ring"
+                id="focusTimerRing"
+            >
+
+                <div class="focus-timer-content">
+
+                    <span
+                        id="focusTimer"
+                        class="focus-timer"
+                    >
+                        25:00
+                    </span>
+
+                    <small id="focusTimerStatus">
+                        Ready to focus
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMER CONTROLS -->
+
+            <div class="focus-controls">
+
+                <button
+                    class="secondary-button"
+                    id="resetFocusButton"
+                >
+                    ↻ Reset
+                </button>
+
+                <button
+                    class="focus-start-button"
+                    id="startFocusTimer"
+                >
+                    Start Focus
+                </button>
+
+                <button
+                    class="secondary-button"
+                    id="skipFocusButton"
+                >
+                    Skip →
+                </button>
+
+            </div>
+
+
+            <!-- PRESETS -->
+
+            <div class="focus-presets">
+
+                <button
+                    class="focus-preset active"
+                    data-focus="25"
+                    data-break="5"
+                >
+                    <strong>
+                        25 / 5
+                    </strong>
+
+                    <span>
+                        Pomodoro
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="focus-preset"
+                    data-focus="50"
+                    data-break="10"
+                >
+                    <strong>
+                        50 / 10
+                    </strong>
+
+                    <span>
+                        Deep Work
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="focus-preset"
+                    data-focus="90"
+                    data-break="15"
+                >
+                    <strong>
+                        90 / 15
+                    </strong>
+
+                    <span>
+                        Long Focus
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOCUS STATS -->
+
+        <div class="focus-side-panel">
+
+
+            <div class="glass-card">
+
+                <p class="card-label">
+                    TODAY
+                </p>
+
+                <h2>
+                    Focus Statistics
+                </h2>
+
+
+                <div class="focus-stat-list">
+
+                    <div class="focus-stat">
+
+                        <span>
+                            Focus Time
+                        </span>
+
+                        <strong id="todayFocusTime">
+                            0m
+                        </strong>
+
+                    </div>
+
+
+                    <div class="focus-stat">
+
+                        <span>
+                            Sessions
+                        </span>
+
+                        <strong id="todayFocusSessions">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="focus-stat">
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <strong id="todayCompletedSessions">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="focus-stat">
+
+                        <span>
+                            Current Streak
+                        </span>
+
+                        <strong id="focusStreak">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CURRENT GOAL -->
+
+            <div class="glass-card focus-goal-card">
+
+                <p class="card-label">
+                    CURRENT GOAL
+                </p>
+
+                <h2>
+                    Today's Study Goal
+                </h2>
+
+                <div class="goal-time">
+
+                    <strong id="goalProgress">
+                        0h 00m
+                    </strong>
+
+                    <span>
+                        / 4h 00m
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-value"
+                        id="focusGoalProgress"
+                        style="width: 0%"
+                    >
+                    </div>
+
+                </div>
+
+
+                <p class="goal-description">
+                    Keep going, Mr Damien. Consistency
+                    beats intensity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SESSION HISTORY -->
+
+    <div class="glass-card focus-history-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <p class="card-label">
+                    ACTIVITY
+                </p>
+
+                <h2>
+                    Recent Focus Sessions
+                </h2>
+
+            </div>
+
+            <button
+                class="text-button"
+                id="clearFocusHistory"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+
+        <div
+            class="focus-history"
+            id="focusHistory"
+        >
+
+            <div class="focus-empty">
+
+                <span>
+                    ◷
+                </span>
+
+                <p>
+                    No focus sessions yet.
+                </p>
+
+                <small>
+                    Start your first session to
+                    build your study history.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>               
+
+
+<!-- =====================================================
+     NOTES & KNOWLEDGE BASE
+===================================================== -->
+
+<section id="notes" class="page-section">
+
+    <div class="notes-header">
+
+        <div>
+            <p class="section-label">
+                PERSONAL KNOWLEDGE BASE
+            </p>
+
+            <h1>Notes</h1>
+
+            <p class="notes-description">
+                Capture, organize and revisit everything
+                you learn, Mr Damien.
+            </p>
+        </div>
+
+        <button
+            class="primary-button"
+            id="newNoteButton"
+        >
+            + New Note
+        </button>
+
+    </div>
+
+
+    <!-- NOTES TOOLBAR -->
+
+    <div class="notes-toolbar">
+
+        <div class="notes-search">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="noteSearch"
+                placeholder="Search your notes..."
+            >
+
+        </div>
+
+
+        <select
+            id="noteCategoryFilter"
+            class="notes-filter"
+        >
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="Academic">
+                Academic
+            </option>
+
+            <option value="Computer Engineering">
+                Computer Engineering
+            </option>
+
+            <option value="Programming">
+                Programming
+            </option>
+
+            <option value="Projects">
+                Projects
+            </option>
+
+            <option value="Personal">
+                Personal
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- NOTES LAYOUT -->
+
+    <div class="notes-layout">
+
+
+        <!-- NOTE LIST -->
+
+        <div class="notes-list-panel">
+
+            <div class="notes-list-header">
+
+                <span id="notesCount">
+                    0 notes
+                </span>
+
+                <button
+                    class="text-button"
+                    id="clearNotesButton"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+
+            <div
+                class="notes-list"
+                id="notesList"
+            >
+
+                <!-- Notes generated by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTE EDITOR -->
+
+        <div class="note-editor-panel">
+
+            <div
+                id="noteEmptyState"
+                class="note-empty-state"
+            >
+
+                <div class="note-empty-icon">
+                    ✦
+                </div>
+
+                <h2>
+                    Select a note
+                </h2>
+
+                <p>
+                    Choose an existing note or create
+                    a new one to start writing.
+                </p>
+
+                <button
+                    class="secondary-button"
+                    id="emptyCreateNote"
+                >
+                    Create Note
+                </button>
+
+            </div>
+
+
+            <div
+                id="noteEditor"
+                class="note-editor"
+                style="display:none;"
+            >
+
+                <div class="note-editor-top">
+
+                    <input
+                        type="text"
+                        id="noteTitle"
+                        class="note-title-input"
+                        placeholder="Note title..."
+                    >
+
+                    <button
+                        class="icon-button"
+                        id="deleteCurrentNote"
+                        title="Delete note"
+                    >
+                        🗑
+                    </button>
+
+                </div>
+
+
+                <div class="note-editor-meta">
+
+                    <select
+                        id="noteCategory"
+                    >
+
+                        <option value="Academic">
+                            Academic
+                        </option>
+
+                        <option value="Computer Engineering">
+                            Computer Engineering
+                        </option>
+
+                        <option value="Programming">
+                            Programming
+                        </option>
+
+                        <option value="Projects">
+                            Projects
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        id="pinNoteButton"
+                        class="note-pin-button"
+                    >
+                        ☆ Pin
+                    </button>
+
+
+                    <span
+                        id="noteSavedStatus"
+                        class="note-saved-status"
+                    >
+                        Saved
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="noteContent"
+                    class="note-content"
+                    placeholder="Start writing your note..."
+                ></textarea>
+
+
+                <div class="note-editor-footer">
+
+                    <span id="noteWordCount">
+                        0 words
+                    </span>
+
+                    <span id="noteUpdated">
+                        Last edited just now
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>                
+<!-- =====================================================
+     RESOURCES & STUDY LIBRARY
+===================================================== -->
+
+<section id="resources" class="page-section">
+
+    <div class="resources-header">
+
+        <div>
+
+            <p class="section-label">
+                KNOWLEDGE LIBRARY
+            </p>
+
+            <h1>
+                Resources
+            </h1>
+
+            <p class="resources-description">
+                Keep your study materials, references and
+                useful learning links in one place, Mr Damien.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-button"
+            id="addResourceButton"
+        >
+            + Add Resource
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         RESOURCE STATISTICS
+    ================================================== -->
+
+    <div class="resource-stats">
+
+        <div class="resource-stat">
+
+            <span class="resource-stat-icon">
+                ◈
+            </span>
+
+            <div>
+
+                <small>
+                    TOTAL RESOURCES
+                </small>
+
+                <strong id="resourceTotal">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="resource-stat">
+
+            <span class="resource-stat-icon">
+                ▣
+            </span>
+
+            <div>
+
+                <small>
+                    PDF / DOCUMENTS
+                </small>
+
+                <strong id="resourceDocuments">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="resource-stat">
+
+            <span class="resource-stat-icon">
+                ◉
+            </span>
+
+            <div>
+
+                <small>
+                    WEB RESOURCES
+                </small>
+
+                <strong id="resourceWeb">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="resource-stat">
+
+            <span class="resource-stat-icon">
+                ★
+            </span>
+
+            <div>
+
+                <small>
+                    FAVORITES
+                </small>
+
+                <strong id="resourceFavorites">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         SEARCH + FILTER
+    ================================================== -->
+
+    <div class="resources-toolbar">
+
+        <div class="resource-search">
+
+            <span>
+                ⌕
+            </span>
+
+            <input
+                type="text"
+                id="resourceSearch"
+                placeholder="Search resources..."
+            >
+
+        </div>
+
+
+        <select
+            id="resourceCategory"
+            class="resource-filter"
+        >
+
+            <option value="all">
+                All Subjects
+            </option>
+
+            <option value="Mathematics">
+                Mathematics
+            </option>
+
+            <option value="Physics">
+                Physics
+            </option>
+
+            <option value="Chemistry">
+                Chemistry
+            </option>
+
+            <option value="Computer Engineering">
+                Computer Engineering
+            </option>
+
+            <option value="Programming">
+                Programming
+            </option>
+
+            <option value="Electronics">
+                Electronics
+            </option>
+
+            <option value="General">
+                General
+            </option>
+
+        </select>
+
+
+        <select
+            id="resourceType"
+            class="resource-filter"
+        >
+
+            <option value="all">
+                All Types
+            </option>
+
+            <option value="PDF">
+                PDF / Document
+            </option>
+
+            <option value="Website">
+                Website
+            </option>
+
+            <option value="Video">
+                Video
+            </option>
+
+            <option value="Code">
+                Code
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- =================================================
+         FAVORITES
+    ================================================== -->
+
+    <div
+        id="favoriteResources"
+        class="favorite-resources"
+    >
+
+        <!-- Generated by JavaScript -->
+
+    </div>
+
+
+    <!-- =================================================
+         RESOURCE GRID
+    ================================================== -->
+
+    <div
+        id="resourceGrid"
+        class="resource-grid"
+    >
+
+        <div class="resource-empty">
+
+            <div class="resource-empty-icon">
+                ◈
+            </div>
+
+            <h3>
+                Your library is empty
+            </h3>
+
+            <p>
+                Add your first study resource to start
+                building your personal knowledge library.
+            </p>
+
+            <button
+                class="secondary-button"
+                id="emptyAddResource"
+            >
+                Add Resource
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADD RESOURCE MODAL
+===================================================== -->
+
+<div
+    id="resourceModal"
+    class="resource-modal"
+>
+
+    <div class="resource-modal-box">
+
+        <div class="resource-modal-header">
+
+            <div>
+
+                <p class="card-label">
+                    LIBRARY
+                </p>
+
+                <h2>
+                    Add Resource
+                </h2>
+
+            </div>
+
+            <button
+                id="closeResourceModal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form
+            id="resourceForm"
+            class="resource-form"
+        >
+
+            <label>
+
+                Resource Name
+
+                <input
+                    type="text"
+                    id="resourceName"
+                    placeholder="e.g. Engineering Mathematics Notes"
+                    required
+                >
+
+            </label>
+
+
+            <div class="resource-form-row">
+
+                <label>
+
+                    Subject
+
+                    <select
+                        id="resourceSubject"
+                        required
+                    >
+
+                        <option value="Mathematics">
+                            Mathematics
+                        </option>
+
+                        <option value="Physics">
+                            Physics
+                        </option>
+
+                        <option value="Chemistry">
+                            Chemistry
+                        </option>
+
+                        <option value="Computer Engineering">
+                            Computer Engineering
+                        </option>
+
+                        <option value="Programming">
+                            Programming
+                        </option>
+
+                        <option value="Electronics">
+                            Electronics
+                        </option>
+
+                        <option value="General">
+                            General
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Type
+
+                    <select
+                        id="resourceKind"
+                        required
+                    >
+
+                        <option value="PDF">
+                            PDF / Document
+                        </option>
+
+                        <option value="Website">
+                            Website
+                        </option>
+
+                        <option value="Video">
+                            Video
+                        </option>
+
+                        <option value="Code">
+                            Code
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <label>
+
+                Resource Link
+
+                <input
+                    type="url"
+                    id="resourceURL"
+                    placeholder="https://..."
+                >
+
+            </label>
+
+
+            <label>
+
+                Description
+
+                <textarea
+                    id="resourceDescription"
+                    placeholder="What is this resource useful for?"
+                ></textarea>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="primary-button resource-submit"
+            >
+                Save Resource
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     NEXUS ANALYTICS
+===================================================== -->
+
+<section id="analytics" class="page-section">
+
+    <div class="analytics-header">
+
+        <div>
+
+            <p class="section-label">
+                PERFORMANCE CENTER
+            </p>
+
+            <h1>
+                Analytics
+            </h1>
+
+            <p class="analytics-description">
+                Understand your study habits, academic progress
+                and productivity, Mr Damien.
+            </p>
+
+        </div>
+
+        <div class="analytics-period">
+
+            <button
+                class="analytics-period-button active"
+                data-period="week"
+            >
+                7 Days
+            </button>
+
+            <button
+                class="analytics-period-button"
+                data-period="month"
+            >
+                30 Days
+            </button>
+
+            <button
+                class="analytics-period-button"
+                data-period="all"
+            >
+                All Time
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         OVERVIEW
+    ================================================== -->
+
+    <div class="analytics-overview">
+
+        <div class="analytics-card">
+
+            <div class="analytics-card-top">
+
+                <span>
+                    OVERALL PRODUCTIVITY
+                </span>
+
+                <span class="analytics-icon">
+                    ◈
+                </span>
+
+            </div>
+
+            <strong id="analyticsProductivity">
+                0%
+            </strong>
+
+            <div class="analytics-progress">
+
+                <div
+                    id="analyticsProductivityBar"
+                    class="analytics-progress-fill"
+                ></div>
+
+            </div>
+
+            <small>
+                Based on your recent activity
+            </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+            <div class="analytics-card-top">
+
+                <span>
+                    STUDY TIME
+                </span>
+
+                <span class="analytics-icon">
+                    ◷
+                </span>
+
+            </div>
+
+            <strong id="analyticsStudyTime">
+                0h
+            </strong>
+
+            <small>
+                Total focus sessions
+            </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+            <div class="analytics-card-top">
+
+                <span>
+                    TASKS COMPLETED
+                </span>
+
+                <span class="analytics-icon">
+                    ✓
+                </span>
+
+            </div>
+
+            <strong id="analyticsTasks">
+                0
+            </strong>
+
+            <small>
+                Completed tasks
+            </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+            <div class="analytics-card-top">
+
+                <span>
+                    RESOURCES
+                </span>
+
+                <span class="analytics-icon">
+                    ◇
+                </span>
+
+            </div>
+
+            <strong id="analyticsResources">
+                0
+            </strong>
+
+            <small>
+                Study resources
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         MAIN ANALYTICS GRID
+    ================================================== -->
+
+    <div class="analytics-grid">
+
+
+        <!-- STUDY ACTIVITY -->
+
+        <div class="analytics-panel study-activity-panel">
+
+            <div class="analytics-panel-header">
+
+                <div>
+
+                    <p class="card-label">
+                        ACTIVITY
+                    </p>
+
+                    <h2>
+                        Study Activity
+                    </h2>
+
+                </div>
+
+                <span
+                    id="analyticsActivityTotal"
+                    class="analytics-panel-value"
+                >
+                    0h
+                </span>
+
+            </div>
+
+
+            <div
+                id="studyActivityChart"
+                class="study-activity-chart"
+            >
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTIVITY BREAKDOWN -->
+
+        <div class="analytics-panel">
+
+            <div class="analytics-panel-header">
+
+                <div>
+
+                    <p class="card-label">
+                        BREAKDOWN
+                    </p>
+
+                    <h2>
+                        Productivity
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="productivity-breakdown">
+
+                <div class="breakdown-item">
+
+                    <div>
+
+                        <span>
+                            Academics
+                        </span>
+
+                        <strong id="academicScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="breakdown-bar">
+
+                        <div
+                            id="academicScoreBar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="breakdown-item">
+
+                    <div>
+
+                        <span>
+                            Tasks
+                        </span>
+
+                        <strong id="taskScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="breakdown-bar">
+
+                        <div
+                            id="taskScoreBar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="breakdown-item">
+
+                    <div>
+
+                        <span>
+                            Study
+                        </span>
+
+                        <strong id="studyScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="breakdown-bar">
+
+                        <div
+                            id="studyScoreBar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="breakdown-item">
+
+                    <div>
+
+                        <span>
+                            Organization
+                        </span>
+
+                        <strong id="organizationScore">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="breakdown-bar">
+
+                        <div
+                            id="organizationScoreBar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACADEMIC PROGRESS -->
+
+        <div class="analytics-panel">
+
+            <div class="analytics-panel-header">
+
+                <div>
+
+                    <p class="card-label">
+                        ACADEMICS
+                    </p>
+
+                    <h2>
+                        Subject Progress
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="subjectProgress"
+                class="subject-progress"
+            >
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <div class="analytics-panel">
+
+            <div class="analytics-panel-header">
+
+                <div>
+
+                    <p class="card-label">
+                        MILESTONES
+                    </p>
+
+                    <h2>
+                        Achievements
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="analyticsAchievements"
+                class="analytics-achievements"
+            >
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         WEEKLY GOALS
+    ================================================== -->
+
+    <div class="analytics-panel weekly-goals-panel">
+
+        <div class="analytics-panel-header">
+
+            <div>
+
+                <p class="card-label">
+                    TARGETS
+                </p>
+
+                <h2>
+                    Weekly Goals
+                </h2>
+
+            </div>
+
+            <button
+                id="editWeeklyGoal"
+                class="secondary-button"
+            >
+                Edit Goals
+            </button>
+
+        </div>
+
+
+        <div class="weekly-goals">
+
+            <div class="weekly-goal">
+
+                <div>
+
+                    <span>
+                        Study Time
+                    </span>
+
+                    <strong>
+                        <span id="goalStudyCurrent">
+                            0
+                        </span>
+                        /
+                        <span id="goalStudyTarget">
+                            10
+                        </span>
+                        hours
+                    </strong>
+
+                </div>
+
+                <div class="goal-bar">
+
+                    <div
+                        id="goalStudyBar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="weekly-goal">
+
+                <div>
+
+                    <span>
+                        Tasks
+                    </span>
+
+                    <strong>
+                        <span id="goalTaskCurrent">
+                            0
+                        </span>
+                        /
+                        <span id="goalTaskTarget">
+                            10
+                        </span>
+                    </strong>
+
+                </div>
+
+                <div class="goal-bar">
+
+                    <div
+                        id="goalTaskBar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="weekly-goal">
+
+                <div>
+
+                    <span>
+                        Resources
+                    </span>
+
+                    <strong>
+                        <span id="goalResourceCurrent">
+                            0
+                        </span>
+                        /
+                        <span id="goalResourceTarget">
+                            5
+                        </span>
+                    </strong>
+
+                </div>
+
+                <div class="goal-bar">
+
+                    <div
+                        id="goalResourceBar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>              
+
+            </div>
+
+<!-- =====================================================
+     CALENDAR & SCHEDULE
+===================================================== -->
+
+<section id="calendar" class="page-section">
+
+    <div class="calendar-header">
+
+        <div>
+
+            <p class="section-label">
+                TIME & SCHEDULE
+            </p>
+
+            <h1>
+                Calendar
+            </h1>
+
+            <p class="calendar-description">
+                Plan your lectures, study sessions,
+                deadlines and important dates, Mr Damien.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-button"
+            id="addCalendarEvent"
+        >
+            + Add Event
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         CALENDAR SUMMARY
+    ================================================== -->
+
+    <div class="calendar-stats">
+
+        <div class="calendar-stat">
+
+            <span class="calendar-stat-icon">
+                ◷
+            </span>
+
+            <div>
+
+                <small>
+                    TODAY
+                </small>
+
+                <strong id="calendarTodayEvents">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="calendar-stat">
+
+            <span class="calendar-stat-icon">
+                ◆
+            </span>
+
+            <div>
+
+                <small>
+                    THIS WEEK
+                </small>
+
+                <strong id="calendarWeekEvents">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="calendar-stat">
+
+            <span class="calendar-stat-icon">
+                !
+            </span>
+
+            <div>
+
+                <small>
+                    UPCOMING DEADLINES
+                </small>
+
+                <strong id="calendarDeadlineEvents">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="calendar-stat">
+
+            <span class="calendar-stat-icon">
+                ✓
+            </span>
+
+            <div>
+
+                <small>
+                    COMPLETED
+                </small>
+
+                <strong id="calendarCompletedEvents">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         CALENDAR TOOLBAR
+    ================================================== -->
+
+    <div class="calendar-toolbar">
+
+        <div class="calendar-navigation">
+
+            <button
+                class="calendar-nav-button"
+                id="previousMonth"
+            >
+                ‹
+            </button>
+
+            <button
+                class="calendar-today-button"
+                id="calendarToday"
+            >
+                Today
+            </button>
+
+            <button
+                class="calendar-nav-button"
+                id="nextMonth"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        <h2
+            id="calendarMonthTitle"
+            class="calendar-month-title"
+        >
+            Month 2026
+        </h2>
+
+
+        <select
+            id="calendarFilter"
+            class="calendar-filter"
+        >
+
+            <option value="all">
+                All Events
+            </option>
+
+            <option value="Lecture">
+                Lectures
+            </option>
+
+            <option value="Study">
+                Study
+            </option>
+
+            <option value="Assignment">
+                Assignments
+            </option>
+
+            <option value="Exam">
+                Exams
+            </option>
+
+            <option value="Project">
+                Projects
+            </option>
+
+            <option value="Personal">
+                Personal
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- =================================================
+         CALENDAR
+    ================================================== -->
+
+    <div class="calendar-layout">
+
+
+        <div class="calendar-main">
+
+            <div class="calendar-weekdays">
+
+                <span>
+                    SUN
+                </span>
+
+                <span>
+                    MON
+                </span>
+
+                <span>
+                    TUE
+                </span>
+
+                <span>
+                    WED
+                </span>
+
+                <span>
+                    THU
+                </span>
+
+                <span>
+                    FRI
+                </span>
+
+                <span>
+                    SAT
+                </span>
+
+            </div>
+
+
+            <div
+                id="calendarGrid"
+                class="calendar-grid"
+            >
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             UPCOMING EVENTS
+        ================================================== -->
+
+        <aside class="calendar-sidebar">
+
+            <div class="calendar-sidebar-header">
+
+                <div>
+
+                    <p class="card-label">
+                        AGENDA
+                    </p>
+
+                    <h3>
+                        Upcoming
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="upcomingEvents"
+                class="upcoming-events"
+            >
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CALENDAR EVENT MODAL
+===================================================== -->
+
+<div
+    id="calendarEventModal"
+    class="calendar-event-modal"
+>
+
+    <div class="calendar-event-box">
+
+        <div class="calendar-event-header">
+
+            <div>
+
+                <p class="card-label">
+                    SCHEDULE
+                </p>
+
+                <h2>
+                    Add Event
+                </h2>
+
+            </div>
+
+            <button
+                id="closeCalendarModal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form
+            id="calendarEventForm"
+            class="calendar-event-form"
+        >
+
+            <label>
+
+                Event Name
+
+                <input
+                    type="text"
+                    id="calendarEventName"
+                    placeholder="e.g. Computer Architecture Lecture"
+                    required
+                >
+
+            </label>
+
+
+            <div class="calendar-form-row">
+
+                <label>
+
+                    Date
+
+                    <input
+                        type="date"
+                        id="calendarEventDate"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Time
+
+                    <input
+                        type="time"
+                        id="calendarEventTime"
+                    >
+
+                </label>
+
+            </div>
+
+
+            <div class="calendar-form-row">
+
+                <label>
+
+                    Category
+
+                    <select
+                        id="calendarEventCategory"
+                    >
+
+                        <option value="Lecture">
+                            Lecture
+                        </option>
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Assignment">
+                            Assignment
+                        </option>
+
+                        <option value="Exam">
+                            Exam
+                        </option>
+
+                        <option value="Project">
+                            Project
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Duration
+
+                    <select
+                        id="calendarEventDuration"
+                    >
+
+                        <option value="1">
+                            1 hour
+                        </option>
+
+                        <option value="2">
+                            2 hours
+                        </option>
+
+                        <option value="3">
+                            3 hours
+                        </option>
+
+                        <option value="4">
+                            4 hours
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <label>
+
+                Description
+
+                <textarea
+                    id="calendarEventDescription"
+                    placeholder="Add notes about this event..."
+                ></textarea>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="primary-button"
+            >
+                Save Event
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- =====================================================
+     NEXUS PROFILE
+===================================================== -->
+
+<section id="profile" class="page-section">
+
+    <div class="profile-header">
+
+        <div>
+            <p class="section-label">PERSONAL SPACE</p>
+
+            <h1>Mr Damien</h1>
+
+            <p class="profile-subtitle">
+                Your academic identity and personal workspace.
+            </p>
+        </div>
+
+        <button
+            class="secondary-button"
+            id="editProfileButton"
+        >
+            Edit Profile
+        </button>
+
+    </div>
+
+
+    <!-- PROFILE HERO -->
+
+    <div class="profile-hero">
+
+        <div class="profile-avatar" id="profileAvatar">
+            D
+        </div>
+
+        <div class="profile-identity">
+
+            <span class="profile-status">
+                ● ACTIVE STUDENT
+            </span>
+
+            <h2 id="profileName">
+                Mr Damien
+            </h2>
+
+            <p id="profileCourse">
+                Computer Engineering
+            </p>
+
+            <p id="profileUniversity">
+                University Student
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE INFORMATION -->
+
+    <div class="profile-grid">
+
+        <div class="profile-panel">
+
+            <div class="profile-panel-heading">
+
+                <div>
+                    <p class="card-label">ACADEMIC IDENTITY</p>
+
+                    <h2>Student Information</h2>
+                </div>
+
+            </div>
+
+            <div class="profile-info-list">
+
+                <div class="profile-info-item">
+                    <span>Display Name</span>
+                    <strong id="infoName">
+                        Mr Damien
+                    </strong>
+                </div>
+
+                <div class="profile-info-item">
+                    <span>Field</span>
+                    <strong id="infoField">
+                        Computer Engineering
+                    </strong>
+                </div>
+
+                <div class="profile-info-item">
+                    <span>Academic Level</span>
+                    <strong id="infoLevel">
+                        Undergraduate
+                    </strong>
+                </div>
+
+                <div class="profile-info-item">
+                    <span>Academic Session</span>
+                    <strong id="infoSession">
+                        2025 / 2026
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERSONAL GOALS -->
+
+        <div class="profile-panel">
+
+            <div class="profile-panel-heading">
+
+                <div>
+                    <p class="card-label">MISSION</p>
+
+                    <h2>Personal Goals</h2>
+                </div>
+
+            </div>
+
+            <div class="profile-goals">
+
+                <div class="profile-goal">
+                    <div class="goal-number">01</div>
+
+                    <div>
+                        <strong>
+                            Master Computer Engineering
+                        </strong>
+
+                        <span>
+                            Build strong technical foundations.
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="profile-goal">
+                    <div class="goal-number">02</div>
+
+                    <div>
+                        <strong>
+                            Improve Academic Performance
+                        </strong>
+
+                        <span>
+                            Stay consistent with study sessions.
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="profile-goal">
+                    <div class="goal-number">03</div>
+
+                    <div>
+                        <strong>
+                            Build Real Projects
+                        </strong>
+
+                        <span>
+                            Turn engineering knowledge into practical work.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE STATISTICS -->
+
+    <div class="profile-stats">
+
+        <div class="profile-stat-card">
+
+            <span>STUDY HOURS</span>
+
+            <strong id="profileStudyHours">
+                0h
+            </strong>
+
+            <small>
+                Total focus time
+            </small>
+
+        </div>
+
+
+        <div class="profile-stat-card">
+
+            <span>TASKS COMPLETED</span>
+
+            <strong id="profileTasksCompleted">
+                0
+            </strong>
+
+            <small>
+                Completed tasks
+            </small>
+
+        </div>
+
+
+        <div class="profile-stat-card">
+
+            <span>RESOURCES</span>
+
+            <strong id="profileResources">
+                0
+            </strong>
+
+            <small>
+                Saved resources
+            </small>
+
+        </div>
+
+
+        <div class="profile-stat-card">
+
+            <span>PROJECTS</span>
+
+            <strong id="profileProjects">
+                0
+            </strong>
+
+            <small>
+                Engineering projects
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <div class="profile-panel profile-about">
+
+        <p class="card-label">
+            ABOUT
+        </p>
+
+        <h2>
+            The person behind Nexus
+        </h2>
+
+        <p id="profileAboutText">
+            Nexus Workspace is Mr Damien's personal command
+            center for university life, engineering studies,
+            productivity and personal development.
+        </p>
+
+    </div>
+    
+</section>
+
+<!-- =====================================================
+     NEXUS SETTINGS
+===================================================== -->
+
+<section id="settings" class="page-section">
+
+    <div class="settings-header">
+
+        <div>
+            <p class="section-label">WORKSPACE CONTROL</p>
+
+            <h1>Settings</h1>
+
+            <p class="settings-subtitle">
+                Configure Nexus Workspace to work the way you want,
+                Mr Damien.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="settings-layout">
+
+        <!-- SETTINGS NAVIGATION -->
+
+        <aside class="settings-sidebar">
+
+            <button
+                class="settings-tab active"
+                data-settings-tab="appearance"
+            >
+                <span>◐</span>
+                Appearance
+            </button>
+
+            <button
+                class="settings-tab"
+                data-settings-tab="workspace"
+            >
+                <span>◈</span>
+                Workspace
+            </button>
+
+            <button
+                class="settings-tab"
+                data-settings-tab="notifications"
+            >
+                <span>◌</span>
+                Notifications
+            </button>
+
+            <button
+                class="settings-tab"
+                data-settings-tab="data"
+            >
+                <span>◇</span>
+                Data & Storage
+            </button>
+
+            <button
+                class="settings-tab"
+                data-settings-tab="about"
+            >
+                <span>ⓘ</span>
+                About Nexus
+            </button>
+
+        </aside>
+
+
+        <!-- SETTINGS CONTENT -->
+
+        <div class="settings-content">
+
+
+            <!-- =========================================
+                 APPEARANCE
+            ========================================== -->
+
+            <div
+                class="settings-page active"
+                data-settings-page="appearance"
+            >
+
+                <div class="settings-section-heading">
+
+                    <p class="card-label">
+                        INTERFACE
+                    </p>
+
+                    <h2>
+                        Appearance
+                    </h2>
+
+                    <p>
+                        Customize the visual experience of Nexus Workspace.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Theme
+                        </strong>
+
+                        <span>
+                            Choose how Nexus looks.
+                        </span>
+
+                    </div>
+
+                    <div class="theme-selector">
+
+                        <button
+                            class="theme-option active"
+                            data-theme="dark"
+                        >
+                            Dark
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme="light"
+                        >
+                            Light
+                        </button>
+
+                        <button
+                            class="theme-option"
+                            data-theme="system"
+                        >
+                            System
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Compact Mode
+                        </strong>
+
+                        <span>
+                            Reduce spacing throughout the workspace.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="compactModeToggle"
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Animations
+                        </strong>
+
+                        <span>
+                            Enable interface transitions and motion.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="animationsToggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 WORKSPACE
+            ========================================== -->
+
+            <div
+                class="settings-page"
+                data-settings-page="workspace"
+            >
+
+                <div class="settings-section-heading">
+
+                    <p class="card-label">
+                        PERSONALIZATION
+                    </p>
+
+                    <h2>
+                        Workspace
+                    </h2>
+
+                    <p>
+                        Configure how your personal dashboard behaves.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Start Page
+                        </strong>
+
+                        <span>
+                            Page shown when Nexus opens.
+                        </span>
+
+                    </div>
+
+                    <select
+                        id="startPageSelect"
+                        class="nexus-select"
+                    >
+
+                        <option value="dashboard">
+                            Dashboard
+                        </option>
+
+                        <option value="academics">
+                            Academics
+                        </option>
+
+                        <option value="tasks">
+                            Tasks
+                        </option>
+
+                        <option value="engineering">
+                            Engineering
+                        </option>
+
+                        <option value="analytics">
+                            Analytics
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Show Welcome Message
+                        </strong>
+
+                        <span>
+                            Display the Mr Damien greeting on the dashboard.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="welcomeToggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Auto Save
+                        </strong>
+
+                        <span>
+                            Automatically save workspace changes.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="autoSaveToggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 NOTIFICATIONS
+            ========================================== -->
+
+            <div
+                class="settings-page"
+                data-settings-page="notifications"
+            >
+
+                <div class="settings-section-heading">
+
+                    <p class="card-label">
+                        ALERTS
+                    </p>
+
+                    <h2>
+                        Notifications
+                    </h2>
+
+                    <p>
+                        Control reminders and workspace alerts.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Task Reminders
+                        </strong>
+
+                        <span>
+                            Remind you about pending tasks.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="taskNotificationsToggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Study Reminders
+                        </strong>
+
+                        <span>
+                            Remind you to maintain your study schedule.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="studyNotificationsToggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <strong>
+                            Calendar Reminders
+                        </strong>
+
+                        <span>
+                            Receive reminders for scheduled events.
+                        </span>
+
+                    </div>
+
+                    <label class="nexus-switch">
+
+                        <input
+                            type="checkbox"
+                            id="calendarNotificationsToggle"
+                            checked
+                        >
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 DATA
+            ========================================== -->
+
+            <div
+                class="settings-page"
+                data-settings-page="data"
+            >
+
+                <div class="settings-section-heading">
+
+                    <p class="card-label">
+                        STORAGE
+                    </p>
+
+                    <h2>
+                        Data & Storage
+                    </h2>
+
+                    <p>
+                        Manage the information stored locally by Nexus.
+                    </p>
+
+                </div>
+
+
+                <div class="storage-card">
+
+                    <div>
+
+                        <strong>
+                            Local Workspace Storage
+                        </strong>
+
+                        <span id="storageStatus">
+                            Your Nexus data is stored locally in this browser.
+                        </span>
+
+                    </div>
+
+                    <span
+                        class="storage-status"
+                    >
+                        LOCAL
+                    </span>
+
+                </div>
+
+
+                <div class="data-actions">
+
+                    <button
+                        class="secondary-button"
+                        id="exportDataButton"
+                    >
+                        Export Workspace
+                    </button>
+
+                    <button
+                        class="secondary-button"
+                        id="importDataButton"
+                    >
+                        Import Workspace
+                    </button>
+
+                    <button
+                        class="danger-button"
+                        id="clearDataButton"
+                    >
+                        Clear Workspace Data
+                    </button>
+
+                    <input
+                        type="file"
+                        id="importDataInput"
+                        accept=".json"
+                        hidden
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 ABOUT
+            ========================================== -->
+
+            <div
+                class="settings-page"
+                data-settings-page="about"
+            >
+
+                <div class="settings-section-heading">
+
+                    <p class="card-label">
+                        SYSTEM
+                    </p>
+
+                    <h2>
+                        About Nexus
+                    </h2>
+
+                    <p>
+                        Information about your personal workspace.
+                    </p>
+
+                </div>
+
+
+                <div class="nexus-about-card">
+
+                    <div class="nexus-logo-small">
+                        N
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Nexus Workspace
+                        </h3>
+
+                        <p>
+                            Personal Study & Work Environment
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-information">
+
+                    <div>
+                        <span>Owner</span>
+                        <strong>Mr Damien</strong>
+                    </div>
+
+                    <div>
+                        <span>Field</span>
+                        <strong>Computer Engineering</strong>
+                    </div>
+
+                    <div>
+                        <span>Platform</span>
+                        <strong>Web</strong>
+                    </div>
+
+                    <div>
+                        <span>Storage</span>
+                        <strong>Local Browser Storage</strong>
+                    </div>
+
+                    <div>
+                        <span>Version</span>
+                        <strong>1.0.0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     NEXUS NOTIFICATIONS
+===================================================== -->
+
+<section id="notifications" class="page-section">
+
+    <div class="notifications-header">
+
+        <div>
+            <p class="section-label">NEXUS INBOX</p>
+
+            <h1>Notifications</h1>
+
+            <p class="notifications-subtitle">
+                Everything that needs Mr Damien's attention.
+            </p>
+        </div>
+
+        <div class="notification-header-actions">
+
+            <button
+                class="secondary-button"
+                id="markAllReadButton"
+            >
+                Mark all as read
+            </button>
+
+            <button
+                class="secondary-button"
+                id="clearNotificationsButton"
+            >
+                Clear all
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         NOTIFICATION SUMMARY
+    ================================================== -->
+
+    <div class="notification-summary">
+
+        <div class="notification-summary-card">
+
+            <span>
+                UNREAD
+            </span>
+
+            <strong id="unreadNotificationCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="notification-summary-card">
+
+            <span>
+                TODAY
+            </span>
+
+            <strong id="todayNotificationCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="notification-summary-card">
+
+            <span>
+                IMPORTANT
+            </span>
+
+            <strong id="importantNotificationCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="notification-summary-card">
+
+            <span>
+                TOTAL
+            </span>
+
+            <strong id="totalNotificationCount">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         FILTER BAR
+    ================================================== -->
+
+    <div class="notification-toolbar">
+
+        <div class="notification-filters">
+
+            <button
+                class="notification-filter active"
+                data-notification-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="notification-filter"
+                data-notification-filter="unread"
+            >
+                Unread
+            </button>
+
+            <button
+                class="notification-filter"
+                data-notification-filter="important"
+            >
+                Important
+            </button>
+
+            <button
+                class="notification-filter"
+                data-notification-filter="academic"
+            >
+                Academic
+            </button>
+
+            <button
+                class="notification-filter"
+                data-notification-filter="task"
+            >
+                Tasks
+            </button>
+
+            <button
+                class="notification-filter"
+                data-notification-filter="calendar"
+            >
+                Calendar
+            </button>
+
+        </div>
+
+
+        <div class="notification-search-wrapper">
+
+            <input
+                type="text"
+                id="notificationSearch"
+                class="notification-search"
+                placeholder="Search notifications..."
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         NOTIFICATION LIST
+    ================================================== -->
+
+    <div
+        class="notification-list"
+        id="notificationList"
+    >
+
+        <!-- JavaScript will render notifications here -->
+
+    </div>
+
+
+    <!-- =================================================
+         EMPTY STATE
+    ================================================== -->
+
+    <div
+        class="notification-empty"
+        id="notificationEmpty"
+        hidden
+    >
+
+        <div class="notification-empty-icon">
+            ✓
+        </div>
+
+        <h2>
+            You're all caught up
+        </h2>
+
+        <p>
+            There are no notifications matching your current filter.
+        </p>
+
+    </div>
+
+</section>
+</div>           
+        </main>
+
+    </div>
+
+
+    
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/engineering.js"></script>
+<script src="js/resources.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/search.js"></script>
+<script src="js/command-center.js"></script>
+
+</body>
+
+</html>
